@@ -20,7 +20,7 @@ langchain-chroma==0.1.4
 
 # ---- PDF handling ----
 pypdf==5.1.0
-reportlab==4.2.5      # used to GENERATE our synthetic sample claim PDFs
+reportlab==4.2.5      
 
 # ---- UI ----
 streamlit==1.40.1

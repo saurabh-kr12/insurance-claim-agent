@@ -1,4 +1,7 @@
 import os
+os.environ["ANONYMIZED_TELEMETRY"] = "False"
+os.environ["CHROMA_TELEMETRY_ENABLED"] = "False"
+
 from dataclasses import dataclass, field
 from typing import List
 from dotenv import load_dotenv
@@ -71,7 +74,7 @@ def load_settings() -> Settings:
 
     return Settings(
         llm_provider=llm_provider,
-        ollama_model=os.getenv("OLLAMA_MODEL", "llama3.1"),
+        ollama_model=os.getenv("OLLAMA_MODEL", "llama3.2:3b"),
         ollama_base_url=os.getenv("OLLAMA_BASE_URL", "http://localhost:11434"),
         openai_api_key=os.getenv("OPENAI_API_KEY", ""),
         openai_model=os.getenv("OPENAI_MODEL", "gpt-4o-mini"),

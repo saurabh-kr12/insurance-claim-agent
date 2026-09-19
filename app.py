@@ -2,6 +2,7 @@ import os
 import shutil
 
 import streamlit as st
+import pandas as pd
 
 from src.config import settings
 from src.ingest import load_and_chunk
@@ -261,7 +262,16 @@ with tab_eval:
 
     with st.expander("Recent raw log entries"):
         logs = fetch_recent_logs(limit=20)
-        st.dataframe(logs) if logs else st.write("No logs yet.")
+
+        if not logs:
+            st.write("No logs yet.")
+        else:
+            try:
+                st.dataframe(pd.DataFrame(logs), use_container_width=True)
+            except Exception:
+                
+                for row in logs:
+                    st.write(row)
 
 # ---------------------------------------------------------------------------
 # TAB 5: About
