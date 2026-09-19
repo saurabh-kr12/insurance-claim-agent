@@ -1,0 +1,30 @@
+# Virtual environment
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+.env.example
+
+# Generated data / DB / vector store (regenerable, don't bloat git history)
+chroma_db/
+logs.db
+*.sqlite3
+
+# Streamlit
+.streamlit/secrets.toml
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Evaluation reports (regenerable)
+reports/

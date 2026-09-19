@@ -1,0 +1,37 @@
+# ---- Core LangChain / Agent stack ----
+langchain==0.3.7
+langchain-community==0.3.7
+langchain-text-splitters==0.3.2
+langgraph==0.2.53
+
+# ---- Local LLM (free, via Ollama) ----
+langchain-ollama==0.2.0
+
+# ---- Optional cloud LLM (only used if you set LLM_PROVIDER=openai) ----
+langchain-openai==0.2.9
+
+# ---- Local embeddings (free, via HuggingFace) ----
+langchain-huggingface==0.1.2
+sentence-transformers==3.3.1
+
+# ---- Vector store ----
+chromadb==0.5.20
+langchain-chroma==0.1.4
+
+# ---- PDF handling ----
+pypdf==5.1.0
+reportlab==4.2.5      # used to GENERATE our synthetic sample claim PDFs
+
+# ---- UI ----
+streamlit==1.40.1
+
+# ---- Config / env ----
+python-dotenv==1.0.1
+
+# ---- Testing ----
+pytest==8.3.3
+
+# ---- Misc utils ----
+pandas==2.2.3
+numpy==1.26.4
+pydantic==2.9.2
